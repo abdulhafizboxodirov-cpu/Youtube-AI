@@ -1,0 +1,21 @@
+# Dependencies
+node_modules/
+
+# Environment variables & Secrets (CRITICAL: Do NOT commit .env to GitHub)
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Netlify build output
+.netlify/
+
+# OS & Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

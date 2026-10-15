@@ -1,0 +1,1594 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Umid Abdullayev — Founder & CEO | Pepito Bolalar Do'konlari Tarmog'i | AI Twin</title>
+
+  <!-- Google Fonts: Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #090D16;
+      --bg-card: rgba(17, 24, 39, 0.72);
+      --bg-card-hover: rgba(30, 41, 59, 0.82);
+      --border-color: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(99, 102, 241, 0.28);
+      --indigo: #6366F1;
+      --indigo-glow: rgba(99, 102, 241, 0.4);
+      --emerald: #10B981;
+      --emerald-glow: rgba(16, 185, 129, 0.35);
+      --cyan: #06B6D4;
+      --text-main: #F8FAFC;
+      --text-muted: #94A3B8;
+      --text-dim: #64748B;
+      --font-heading: 'Outfit', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 20% 15%, rgba(99, 102, 241, 0.14) 0%, transparent 45%),
+        radial-gradient(circle at 80% 60%, rgba(16, 185, 129, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(6, 182, 212, 0.08) 0%, transparent 50%);
+      min-height: 100vh;
+    }
+
+    /* Ambient background grid */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: 44px 44px;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Glassmorphism Classes */
+    .glass {
+      background: var(--bg-card);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid var(--border-color);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .glass-hover {
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .glass-hover:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-glow);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(99, 102, 241, 0.15);
+    }
+
+    /* Header Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1rem 2rem;
+      transition: background 0.3s;
+    }
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 9999px;
+      padding: 0.75rem 1.75rem;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      text-decoration: none;
+      color: #fff;
+    }
+    .nav-logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.25), rgba(16, 185, 129, 0.25));
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .nav-brand-text {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #fff 40%, var(--indigo) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.925rem;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover {
+      color: #fff;
+    }
+    .nav-cta-btn {
+      background: linear-gradient(135deg, var(--indigo) 0%, #4F46E5 100%);
+      color: #fff !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      box-shadow: 0 4px 14px var(--indigo-glow);
+      transition: transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+    }
+    .nav-cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Section (Clean & Centered) */
+    .hero-section {
+      padding-top: 8.5rem;
+      padding-bottom: 4rem;
+      text-align: center;
+    }
+    .hero-content {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      padding: 0.45rem 1.25rem;
+      border-radius: 9999px;
+      color: #A5B4FC;
+      font-size: 0.875rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.02em;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--emerald);
+      box-shadow: 0 0 12px var(--emerald);
+      animation: pulse 1.8s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 3.8rem;
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 30%, #818CF8 70%, #10B981 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-subtitle {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #CBD5E1;
+      margin-bottom: 1.25rem;
+    }
+    .hero-desc {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      line-height: 1.75;
+      margin: 0 auto 2.5rem;
+      max-width: 720px;
+    }
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.975rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: none;
+      outline: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--indigo) 0%, #4338CA 100%);
+      color: #fff;
+      box-shadow: 0 4px 18px var(--indigo-glow);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(99, 102, 241, 0.55);
+    }
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      color: #E2E8F0;
+      border: 1px solid var(--border-color);
+    }
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+
+    /* Key Metrics Counters */
+    .metrics-section {
+      padding: 2.5rem 0 4rem;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1.5rem;
+    }
+    .metric-card {
+      border-radius: 20px;
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .metric-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--indigo), var(--emerald));
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    .metric-card:hover::before {
+      opacity: 1;
+    }
+    .metric-num {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: linear-gradient(135deg, #fff 50%, #A5B4FC 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .metric-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    /* Section Headers */
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-eyebrow {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      font-weight: 700;
+      color: var(--emerald);
+      margin-bottom: 0.6rem;
+      display: block;
+    }
+    .section-heading {
+      font-family: var(--font-heading);
+      font-size: 2.5rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1rem;
+    }
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 620px;
+      margin: 0 auto;
+      font-size: 1.05rem;
+    }
+
+    /* AI Twin Interactive Section */
+    .chat-section {
+      padding: 4rem 0 5.5rem;
+    }
+    .chat-container {
+      max-width: 960px;
+      margin: 0 auto;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(99, 102, 241, 0.25);
+      background: rgba(13, 19, 33, 0.9);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(99, 102, 241, 0.12);
+    }
+    .chat-header {
+      padding: 1.25rem 2rem;
+      background: rgba(17, 24, 39, 0.95);
+      border-bottom: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .chat-header-user {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .chat-avatar-badge {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--indigo), #4338CA);
+      border: 2px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      color: #fff;
+      box-shadow: 0 0 15px var(--indigo-glow);
+    }
+    .chat-title-group h3 {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+    }
+    .chat-status {
+      font-size: 0.8rem;
+      color: var(--emerald);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .chat-model-badge {
+      background: rgba(99, 102, 241, 0.15);
+      border: 1px solid rgba(99, 102, 241, 0.35);
+      color: #C7D2FE;
+      font-size: 0.775rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-family: monospace;
+      font-weight: 600;
+    }
+
+    /* Preset prompt chips */
+    .chips-wrapper {
+      padding: 1rem 1.75rem;
+      background: rgba(15, 23, 42, 0.6);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      gap: 0.6rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .chips-wrapper::-webkit-scrollbar {
+      display: none;
+    }
+    .prompt-chip {
+      white-space: nowrap;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: #CBD5E1;
+      padding: 0.45rem 0.95rem;
+      border-radius: 9999px;
+      font-size: 0.825rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .prompt-chip:hover {
+      background: rgba(99, 102, 241, 0.2);
+      border-color: var(--indigo);
+      color: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* Messages Area */
+    .chat-messages {
+      height: 440px;
+      overflow-y: auto;
+      padding: 1.75rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      scroll-behavior: smooth;
+    }
+    .message {
+      display: flex;
+      gap: 0.85rem;
+      max-width: 80%;
+      animation: messageIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    @keyframes messageIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .message.bot {
+      align-self: flex-start;
+    }
+    .message.user {
+      align-self: flex-end;
+      flex-direction: row-reverse;
+    }
+    .bot-avatar-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4338CA, var(--indigo));
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .user-avatar-circle {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--indigo), var(--cyan));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.8rem;
+      color: #fff;
+      flex-shrink: 0;
+    }
+    .msg-bubble {
+      padding: 0.95rem 1.25rem;
+      border-radius: 18px;
+      font-size: 0.95rem;
+      line-height: 1.55;
+      position: relative;
+      word-break: break-word;
+    }
+    .message.bot .msg-bubble {
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #F1F5F9;
+      border-top-left-radius: 4px;
+    }
+    .message.user .msg-bubble {
+      background: linear-gradient(135deg, var(--indigo) 0%, #4338CA 100%);
+      color: #FFFFFF;
+      border-top-right-radius: 4px;
+      box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+    }
+    .msg-time {
+      display: block;
+      font-size: 0.725rem;
+      color: var(--text-dim);
+      margin-top: 0.4rem;
+      text-align: right;
+    }
+    .fallback-highlight {
+      display: inline-block;
+      margin-top: 0.4rem;
+      padding: 0.3rem 0.6rem;
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      border-radius: 6px;
+      color: #FCA5A5;
+      font-size: 0.85rem;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 0.75rem 1.25rem;
+      background: rgba(30, 41, 59, 0.85);
+      border-radius: 18px;
+      border-top-left-radius: 4px;
+      width: fit-content;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .typing-indicator span {
+      width: 7px;
+      height: 7px;
+      background: var(--indigo);
+      border-radius: 50%;
+      animation: bounce 1.4s infinite ease-in-out both;
+    }
+    .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+    .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+    @keyframes bounce {
+      0%, 80%, 100% { transform: scale(0); }
+      40% { transform: scale(1.0); }
+    }
+
+    /* Chat Input Form */
+    .chat-form {
+      padding: 1.25rem 2rem;
+      background: rgba(17, 24, 39, 0.95);
+      border-top: 1px solid var(--border-color);
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .chat-input {
+      flex: 1;
+      background: rgba(15, 23, 42, 0.8);
+      border: 1px solid var(--border-color);
+      color: #fff;
+      padding: 0.85rem 1.25rem;
+      border-radius: 14px;
+      font-size: 0.95rem;
+      font-family: var(--font-body);
+      outline: none;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .chat-input:focus {
+      border-color: var(--indigo);
+      box-shadow: 0 0 16px var(--indigo-glow);
+    }
+    .chat-send-btn {
+      background: linear-gradient(135deg, var(--indigo) 0%, #4338CA 100%);
+      color: #fff;
+      border: none;
+      padding: 0.85rem 1.4rem;
+      border-radius: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+    .chat-send-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 4px 16px var(--indigo-glow);
+    }
+    .chat-send-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* Pillars Section */
+    .pillars-section {
+      padding: 4rem 0 5rem;
+    }
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .pillar-card {
+      border-radius: 24px;
+      padding: 2.25rem 2rem;
+      position: relative;
+    }
+    .pillar-icon-box {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(16, 185, 129, 0.2));
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .pillar-title {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: #fff;
+    }
+    .pillar-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.65;
+    }
+
+    /* Products Section */
+    .products-section {
+      padding: 4rem 0 5rem;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.75rem;
+    }
+    .product-card {
+      border-radius: 22px;
+      padding: 2rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .prod-icon {
+      font-size: 2.25rem;
+      margin-bottom: 1.25rem;
+    }
+    .prod-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      color: #fff;
+    }
+    .prod-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+    }
+    .prod-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+    .prod-tag {
+      font-size: 0.75rem;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border-color);
+      color: #CBD5E1;
+      padding: 0.25rem 0.65rem;
+      border-radius: 9999px;
+    }
+
+    /* Branches Explorer */
+    .branches-section {
+      padding: 4rem 0 5.5rem;
+    }
+    .district-filter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      padding: 0.55rem 1.2rem;
+      border-radius: 9999px;
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: var(--indigo);
+      border-color: var(--indigo);
+      color: #fff;
+      box-shadow: 0 4px 15px var(--indigo-glow);
+    }
+    .branches-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    .branch-card {
+      border-radius: 20px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+    }
+    .branch-district-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--emerald);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.6rem;
+    }
+    .branch-address {
+      font-family: var(--font-heading);
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+    .branch-landmark {
+      color: var(--text-muted);
+      font-size: 0.875rem;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .branch-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.8rem;
+      color: var(--text-dim);
+    }
+    .branch-time {
+      color: #94A3B8;
+      font-weight: 500;
+    }
+
+    /* Services & Operations */
+    .services-section {
+      padding: 4rem 0 5rem;
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .service-card {
+      border-radius: 22px;
+      padding: 2rem 1.75rem;
+    }
+    .service-icon {
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+    .service-title {
+      font-family: var(--font-heading);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.6rem;
+    }
+    .service-desc {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      line-height: 1.6;
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .toast {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(239, 68, 68, 0.4);
+      color: #F8FAFC;
+      padding: 1rem 1.4rem;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.9rem;
+      animation: toastIn 0.3s ease;
+      max-width: 380px;
+    }
+    @keyframes toastIn {
+      from { transform: translateX(100%); opacity: 0; }
+      to { transform: translateX(0); opacity: 1; }
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-color);
+      padding: 4.5rem 0 2.5rem;
+      background: rgba(11, 15, 25, 0.95);
+      margin-top: 3rem;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3.5rem;
+    }
+    .footer-brand h4 {
+      font-family: var(--font-heading);
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.925rem;
+      max-width: 380px;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+    }
+    .footer-title {
+      font-family: var(--font-heading);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25rem;
+    }
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover {
+      color: var(--indigo);
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+    }
+    .tech-pill {
+      background: rgba(255, 255, 255, 0.04);
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #94A3B8;
+      font-size: 0.75rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2.6rem;
+      }
+      .chat-messages {
+        height: 380px;
+        padding: 1.25rem 1rem;
+      }
+      .message {
+        max-width: 92%;
+      }
+      .chat-form {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Header -->
+  <header>
+    <div class="nav-container">
+      <a href="#" class="nav-brand">
+        <div class="nav-logo-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818CF8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </div>
+        <span class="nav-brand-text">Umid Abdullayev</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">Biznes haqida</a></li>
+        <li><a href="#ai-twin">AI Egizak</a></li>
+        <li><a href="#products">Assortiment</a></li>
+        <li><a href="#branches">Filiallar (21)</a></li>
+        <li><a href="#contact">Aloqa</a></li>
+      </ul>
+      <a href="#ai-twin" class="nav-cta-btn">AI Twin bilan muloqot</a>
+    </div>
+  </header>
+
+  <!-- Hero Section (Clean, Modern, Picture-Free) -->
+  <section class="hero-section" id="about">
+    <div class="container">
+      <div class="hero-content">
+        <div class="badge-pill">
+          <span class="pulse-dot"></span>
+          Toshkent Chakana Savdo Yetakchisi • 21 Filial
+        </div>
+        <h1 class="hero-title">
+          <span class="gradient-text">Umid Abdullayev</span><br>
+          Boshqaruv & Innovatsiya
+        </h1>
+        <p class="hero-subtitle">
+          "Pepito" bolalar mahsulotlari do'konlari tarmog'i asoschisi va rahbari
+        </p>
+        <p class="hero-desc">
+          2024-yilda tashkil topganidan buyon Toshkent shahrining deyarli barcha tumanlarida 21 ta filialgacha kengaygan va 100 nafargacha xodimdan iborat kuchli jamoani birlashtirgan chakana savdo tarmog'ini boshqarib kelmoqdaman.
+        </p>
+        <div class="hero-actions">
+          <a href="#ai-twin" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+            AI Egizagim bilan suhbat
+          </a>
+          <a href="#branches" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="3 11 22 2 13 21 11 13 3 11"></polygon></svg>
+            21 ta Filialni ko'rish
+          </a>
+          <a href="tel:785550400" class="btn btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            78 555 04 00
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Key Metrics Counter Section -->
+  <section class="metrics-section">
+    <div class="container">
+      <div class="metrics-grid">
+        <div class="metric-card glass glass-hover">
+          <div class="metric-num">21+</div>
+          <div class="metric-label">Toshkent bo'ylab filiallar</div>
+        </div>
+        <div class="metric-card glass glass-hover">
+          <div class="metric-num">100+</div>
+          <div class="metric-label">Professional jamoa a'zolari</div>
+        </div>
+        <div class="metric-card glass glass-hover">
+          <div class="metric-num">15 Soat</div>
+          <div class="metric-label">Har kuni: 09:00 dan 00:00 gacha</div>
+        </div>
+        <div class="metric-card glass glass-hover">
+          <div class="metric-num">4 Guruh</div>
+          <div class="metric-label">Bolalar mahsulotlari assortimenti</div>
+        </div>
+        <div class="metric-card glass glass-hover">
+          <div class="metric-num">100%</div>
+          <div class="metric-label">Malakali bepul konsultatsiya</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Twin Interactive Section -->
+  <section class="chat-section" id="ai-twin">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Interaktiv Sun'iy Intellekt</span>
+        <h2 class="section-heading">Umid Abdullayevning AI Egizagi</h2>
+        <p class="section-desc">
+          Mening tajribam, faoliyatim, Pepito tarmog'i, mahsulotlarimiz va filiallarimiz haqida bevosita sun'iy intellekt orqali so'rang.
+        </p>
+      </div>
+
+      <div class="chat-container">
+        <!-- Chat Header -->
+        <div class="chat-header">
+          <div class="chat-header-user">
+            <div class="chat-avatar-badge">🤖</div>
+            <div class="chat-title-group">
+              <h3>Umid Abdullayev (AI Twin)</h3>
+              <div class="chat-status">
+                <span class="pulse-dot"></span>
+                <span>Onlayn • DeepSeek v4 Pro orqali ishlaydi</span>
+              </div>
+            </div>
+          </div>
+          <div class="chat-model-badge">
+            Model: deepseek-v4-pro
+          </div>
+        </div>
+
+        <!-- Chips Wrapper -->
+        <div class="chips-wrapper" id="promptChips">
+          <button class="prompt-chip" data-prompt="Pepito haqida umumiy ma'lumot bering va nechanchi yilda ochilgan?">
+            🏪 Pepito qachon ochilgan?
+          </button>
+          <button class="prompt-chip" data-prompt="Toshkent shahrida nechta filialingiz bor va ular qaysi tumanlarda joylashgan?">
+            📍 Filiallaringiz soni va manzillari?
+          </button>
+          <button class="prompt-chip" data-prompt="Pepitoda qanday toifadagi mahsulotlar sotiladi?">
+            👶 Qanday mahsulotlar bor?
+          </button>
+          <button class="prompt-chip" data-prompt="Do'konlaringizning ish vaqti qanday va yetkazib berish xizmati bormi?">
+            ⏰ Ish vaqti va dastavka?
+          </button>
+          <button class="prompt-chip" data-prompt="Jamoangizda qancha xodim ishlaydi va ularga qanday imkoniyatlar yaratilgan?">
+            👥 Jamoangiz haqida?
+          </button>
+          <button class="prompt-chip" data-prompt="Bonus va keshbek tizimingiz qanday ishlaydi?">
+            🎁 Bonus kartasi bormi?
+          </button>
+          <button class="prompt-chip" data-prompt="Pepito bilan qanday bog'lansa bo'ladi va telefon raqamingiz nima?">
+            📞 Yagona aloqa raqami?
+          </button>
+        </div>
+
+        <!-- Messages Area -->
+        <div class="chat-messages" id="chatMessages">
+          <div class="message bot">
+            <div class="bot-avatar-circle">UA</div>
+            <div class="msg-bubble">
+              Assalomu alaykum! Men — <strong>Umid Abdullayevning</strong> rasmiy Sun'iy Intellekt Egizagiman. 
+              "Pepito" bolalar mahsulotlari do'konlari tarmog'imiz, tajribam, boshqaruv strategiyam, 21 ta filialimiz va xizmatlarimiz bo'yicha har qanday savolingizga mamnuniyat bilan javob beraman.
+              <span class="msg-time" id="welcomeTime">Hozir</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat Input Form -->
+        <form class="chat-form" id="chatForm">
+          <input type="text" class="chat-input" id="chatInput" placeholder="Menga savolingizni yozing (masalan: Pepito qachon tashkil etilgan?)..." autocomplete="off" required>
+          <button type="submit" class="chat-send-btn" id="sendBtn">
+            <span>Yuborish</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars Section -->
+  <section class="pillars-section" id="values">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Biznes Falsafasi</span>
+        <h2 class="section-heading">Pepito Nega Muvaffaqiyatli?</h2>
+        <p class="section-desc">
+          Biz mijozlarimizga oddiy do'kon emas, balki yosh ota-onalarning kundalik yumushlarini yengillashtiruvchi ishonchli hamkor bo'lishni maqsad qilganmiz.
+        </p>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card glass glass-hover">
+          <div class="pillar-icon-box">⚡</div>
+          <h3 class="pillar-title">Maksimal Qulaylik</h3>
+          <p class="pillar-desc">
+            Shahar bo'ylab har bir tuman va mahallaga yaqin 21 ta filial, har kuni kech 00:00 gacha ochiq ish rejimi hamda uyga tezkor yetkazib berish xizmati.
+          </p>
+        </div>
+
+        <div class="pillar-card glass glass-hover">
+          <div class="pillar-icon-box">💎</div>
+          <h3 class="pillar-title">Keng Tanlov & Narx</h3>
+          <p class="pillar-desc">
+            Har bir oila byudjetiga mos uchta narx toifasi: Premium, O'rta va Tejamkor/Arzon brendlar. Sifat va hamyonboplikning uyg'un muvozanati.
+          </p>
+        </div>
+
+        <div class="pillar-card glass glass-hover">
+          <div class="pillar-icon-box">❤️</div>
+          <h3 class="pillar-title">Samimiy G'amxo'rlik</h3>
+          <p class="pillar-desc">
+            Har bir filialimizda ona va bola parvarishi bo'yicha malakali konsultantlar xizmati. To'g'ri ozuqa va gigiyena vositalarini tanlashda bepul tavsiyalar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section class="products-section" id="products">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Assortiment</span>
+        <h2 class="section-heading">4 Asosiy Mahsulot Guruhi</h2>
+        <p class="section-desc">
+          Bola hayotining dastlabki yillarida kerak bo'ladigan barcha ehtiyojlar yagona do'konda mujassamlashgan.
+        </p>
+      </div>
+
+      <div class="products-grid">
+        <div class="product-card glass glass-hover">
+          <div>
+            <div class="prod-icon">🍼</div>
+            <h3 class="prod-title">Bolalar Ozuqasi</h3>
+            <p class="prod-desc">
+              Sut aralashmalari, vitaminga boy bo'tqalar, meva va sabzavot pyurelary, tabiiy sharbatlar va maxsus parhez mahsulotlari.
+            </p>
+          </div>
+          <div class="prod-tags">
+            <span class="prod-tag">Sut aralashmalari</span>
+            <span class="prod-tag">Bo'tqalar</span>
+            <span class="prod-tag">Pyurelar</span>
+          </div>
+        </div>
+
+        <div class="product-card glass glass-hover">
+          <div>
+            <div class="prod-icon">🚼</div>
+            <h3 class="prod-title">Tagliklar</h3>
+            <p class="prod-desc">
+              Yangi tug'ilganlar uchun nozik tagliklar, harakatlanish uchun qulay taglik-trusiklar va barcha o'lchamdagi standart tagliklar.
+            </p>
+          </div>
+          <div class="prod-tags">
+            <span class="prod-tag">Taglik-trusiklar</span>
+            <span class="prod-tag">Oddiy tagliklar</span>
+            <span class="prod-tag">Yangi tug'ilganlar</span>
+          </div>
+        </div>
+
+        <div class="product-card glass glass-hover">
+          <div>
+            <div class="prod-icon">🧴</div>
+            <h3 class="prod-title">Gigiyena Vositalari</h3>
+            <p class="prod-desc">
+              Gipoallergen nam salfetkalar, maxsus himoya kremlari, ko'zni achitmaydigan shampunlar va bolalar cho'milish vositalari.
+            </p>
+          </div>
+          <div class="prod-tags">
+            <span class="prod-tag">Nam salfetkalar</span>
+            <span class="prod-tag">Kremlar</span>
+            <span class="prod-tag">Shampunlar</span>
+          </div>
+        </div>
+
+        <div class="product-card glass glass-hover">
+          <div>
+            <div class="prod-icon">🧸</div>
+            <h3 class="prod-title">Aksessuarlar</h3>
+            <p class="prod-desc">
+              Antikolik butilkalar, anatomik so'rg'ichlar, xavfsiz materiallardan tayyorlangan idishlar va chaqaloq parvarishi buyumlari.
+            </p>
+          </div>
+          <div class="prod-tags">
+            <span class="prod-tag">Butilkalar</span>
+            <span class="prod-tag">So'rg'ichlar</span>
+            <span class="prod-tag">Idishlar</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Branches Explorer Section -->
+  <section class="branches-section" id="branches">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Toshkent Bo'ylab Qamrov</span>
+        <h2 class="section-heading">21 Ta Filialimiz Ro'yxati</h2>
+        <p class="section-desc">
+          Do'konlarimiz har kuni soat <strong>09:00 dan 00:00 gacha</strong> dam olish kunlarisiz xizmat ko'rsatadi.
+        </p>
+      </div>
+
+      <!-- District Filters -->
+      <div class="district-filter" id="districtFilters">
+        <button class="filter-btn active" data-filter="all">Barcha Filiallar (21)</button>
+        <button class="filter-btn" data-filter="Shayxontohur">Shayxontohur</button>
+        <button class="filter-btn" data-filter="Yunusobod">Yunusobod</button>
+        <button class="filter-btn" data-filter="Olmazor">Olmazor</button>
+        <button class="filter-btn" data-filter="Chilonzor">Chilonzor</button>
+        <button class="filter-btn" data-filter="Mirzo Ulug'bek">Mirzo Ulug'bek</button>
+        <button class="filter-btn" data-filter="Sergeli">Sergeli</button>
+        <button class="filter-btn" data-filter="Yangihayot">Yangihayot</button>
+        <button class="filter-btn" data-filter="Uchtepa">Uchtepa</button>
+      </div>
+
+      <!-- Branches Grid -->
+      <div class="branches-grid" id="branchesGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Services & Operations -->
+  <section class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">Ekotizim</span>
+        <h2 class="section-heading">Qo'shimcha Xizmatlar & Imkoniyatlar</h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card glass glass-hover">
+          <div class="service-icon">👩‍⚕️</div>
+          <h3 class="service-title">Bepul Konsultatsiya</h3>
+          <p class="service-desc">
+            Birinchi farzandini kutayotgan ota-onalar do'konga kelganda qanday ozuqa va gigiyena tanlashni bilmasligi mumkin. Bizning konsultantlar ularga xolisona tavsiyalar beradi.
+          </p>
+        </div>
+
+        <div class="service-card glass glass-hover">
+          <div class="service-icon">🛵</div>
+          <h3 class="service-title">Uyga Yetkazib Berish</h3>
+          <p class="service-desc">
+            Chaqaloq bilan uydan chiqish oson emas. Shu bois Pepito buyurtmalarni ostonagacha yetkazib berish xizmatini yo'lga qo'ygan.
+          </p>
+        </div>
+
+        <div class="service-card glass glass-hover">
+          <div class="service-icon">💳</div>
+          <h3 class="service-title">Bonus va Keshbek</h3>
+          <p class="service-desc">
+            Har bir xariddan yig'iladigan bonus ballari orqali navbatdagi taglik yoki ozuqa xaridlarini yanada tejash mumkin.
+          </p>
+        </div>
+
+        <div class="service-card glass glass-hover">
+          <div class="service-icon">📱</div>
+          <h3 class="service-title">Onlayn Buyurtma</h3>
+          <p class="service-desc">
+            Instagram sahifasi, qulay Telegram bot va axborot kanali orqali yangiliklar, aksiyalar va tezkor buyurtmalar qabul qilinadi.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h4>Umid Abdullayev • Pepito</h4>
+          <p>
+            "Pepito" bolalar mahsulotlari do'konlari tarmog'i asoschisi va rahbari. Toshkent bo'ylab 21 ta filial va zamonaviy xizmat ko'rsatish tizimi.
+          </p>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <span class="tech-pill">Node.js Express</span>
+            <span class="tech-pill">DeepSeek v4 Pro</span>
+            <span class="tech-pill">Netlify Serverless</span>
+            <span class="tech-pill">Glassmorphism UI</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Tezkor Havolalar</h4>
+          <ul class="footer-links">
+            <li><a href="#about">Biznes haqida</a></li>
+            <li><a href="#ai-twin">AI Twin terminali</a></li>
+            <li><a href="#products">Mahsulot toifalari</a></li>
+            <li><a href="#branches">Filiallar manzili</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Yagona Aloqa Markazi</h4>
+          <ul class="footer-links">
+            <li><strong style="color: #fff;">Telefon:</strong> <a href="tel:785550400">78 555 04 00</a></li>
+            <li><strong style="color: #fff;">Manba:</strong> Golden Pages</li>
+            <li><strong style="color: #fff;">Ish tartibi:</strong> Har kuni 09:00 - 00:00</li>
+            <li><strong style="color: #fff;">Hudud:</strong> Toshkent shahri</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Umid Abdullayev. Barcha huquqlar himoyalangan.
+        </div>
+        <div>
+          Ishlab chiqilgan: Portfolio & Interactive AI Twin (Dual-Target Application)
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script>
+    // Branches Data from CV
+    const BRANCHES = [
+      {
+        district: "Shayxontohur",
+        address: "Ko'kcha Darvoza ko'chasi, 337",
+        landmark: "40-maktab, Ko'kcha masjidi",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Yunusobod",
+        address: "Yunusobod-11, Yangishahar ko'chasi, 16",
+        landmark: "Mega Planet savdo markazi",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Olmazor",
+        address: "Keles yo'li ko'chasi",
+        landmark: "Mevazor supermarketi",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Chilonzor",
+        address: "Chilonzor-11, Qatortol ko'chasi",
+        landmark: "Shuhrat chorrahasi",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Mirzo Ulug'bek",
+        address: "Xirmontepa ko'chasi, 34B",
+        landmark: "Media Park (Gorkiy)",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Sergeli",
+        address: "Sergeli-7, Shokirariq ko'chasi",
+        landmark: "Mudarris xususiy maktabi",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Yangihayot",
+        address: "Uzar ko'chasi, 84",
+        landmark: "124-bolalar bog'chasi",
+        time: "09:00 - 00:00"
+      },
+      {
+        district: "Uchtepa",
+        address: "Farhod chorrahasi hududi",
+        landmark: "Farhod chorrahasi yaqinida",
+        time: "09:00 - 00:00"
+      }
+    ];
+
+    // Render Branches
+    function renderBranches(filter = 'all') {
+      const grid = document.getElementById('branchesGrid');
+      grid.innerHTML = '';
+
+      const filtered = filter === 'all' 
+        ? BRANCHES 
+        : BRANCHES.filter(b => b.district.toLowerCase() === filter.toLowerCase());
+
+      filtered.forEach(branch => {
+        const card = document.createElement('div');
+        card.className = 'branch-card glass glass-hover';
+        card.innerHTML = `
+          <div>
+            <span class="branch-district-badge">${branch.district} tumani</span>
+            <div class="branch-address">${branch.address}</div>
+            <div class="branch-landmark">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              Mo'ljal: ${branch.landmark}
+            </div>
+          </div>
+          <div class="branch-footer">
+            <span class="branch-time">⏰ ${branch.time}</span>
+            <a href="tel:785550400" style="color: var(--indigo); text-decoration: none; font-weight: 600;">Tel: 78 555 04 00</a>
+          </div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+
+    // Filter Buttons Listener
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        renderBranches(btn.getAttribute('data-filter'));
+      });
+    });
+
+    renderBranches('all');
+
+    // Toast Notification Utility
+    function showToast(message, type = 'error') {
+      const container = document.getElementById('toastContainer');
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerHTML = `
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#EF4444" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+        <span>${message}</span>
+      `;
+      container.appendChild(toast);
+      setTimeout(() => {
+        toast.style.transition = 'opacity 0.4s';
+        toast.style.opacity = '0';
+        setTimeout(() => toast.remove(), 400);
+      }, 5000);
+    }
+
+    // Chat Logic
+    const chatForm = document.getElementById('chatForm');
+    const chatInput = document.getElementById('chatInput');
+    const sendBtn = document.getElementById('sendBtn');
+    const chatMessages = document.getElementById('chatMessages');
+    const promptChips = document.getElementById('promptChips');
+
+    // Set Welcome Time
+    const now = new Date();
+    document.getElementById('welcomeTime').textContent = now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+    function formatText(text) {
+      // Escape HTML
+      let safe = text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      
+      // Fallback phrase styling
+      const fallbackTarget = "Kiritilgan savol bo'yicha CV'da ma'lumot mavjud emas";
+      if (safe.includes(fallbackTarget)) {
+        safe = safe.replace(fallbackTarget, `<span class="fallback-highlight">ℹ️ ${fallbackTarget}</span>`);
+      }
+
+      // Convert **bold** to <strong>
+      safe = safe.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+
+      // Convert * bullets to list items
+      safe = safe.replace(/^\* (.*$)/gim, '<div style="margin-left: 12px;">• $1</div>');
+
+      // Convert newlines to breaks
+      safe = safe.replace(/\n/g, '<br>');
+      return safe;
+    }
+
+    function appendMessage(sender, text) {
+      const msgDiv = document.createElement('div');
+      msgDiv.className = `message ${sender}`;
+      
+      const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+      if (sender === 'user') {
+        msgDiv.innerHTML = `
+          <div class="user-avatar-circle">Siz</div>
+          <div class="msg-bubble">
+            ${formatText(text)}
+            <span class="msg-time">${timeStr}</span>
+          </div>
+        `;
+      } else {
+        msgDiv.innerHTML = `
+          <div class="bot-avatar-circle">UA</div>
+          <div class="msg-bubble">
+            ${formatText(text)}
+            <span class="msg-time">${timeStr}</span>
+          </div>
+        `;
+      }
+
+      chatMessages.appendChild(msgDiv);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function showTypingIndicator() {
+      const indicator = document.createElement('div');
+      indicator.className = 'message bot';
+      indicator.id = 'typingIndicator';
+      indicator.innerHTML = `
+        <div class="bot-avatar-circle">UA</div>
+        <div class="typing-indicator">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      `;
+      chatMessages.appendChild(indicator);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    function removeTypingIndicator() {
+      const indicator = document.getElementById('typingIndicator');
+      if (indicator) indicator.remove();
+    }
+
+    async function sendMessage(text) {
+      const cleanText = text.trim();
+      if (!cleanText) return;
+
+      appendMessage('user', cleanText);
+      chatInput.value = '';
+      chatInput.disabled = true;
+      sendBtn.disabled = true;
+      showTypingIndicator();
+
+      try {
+        const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ message: cleanText })
+        });
+
+        const data = await response.json();
+        removeTypingIndicator();
+
+        if (response.ok && data.reply) {
+          appendMessage('bot', data.reply);
+        } else {
+          const errMsg = data.error || "Sun'iy intellekt xizmatida xatolik yuz berdi.";
+          const errDetail = data.details ? ` (${data.details})` : '';
+          appendMessage('bot', `⚠️ Xatolik: ${errMsg}${errDetail}`);
+          showToast(`${errMsg}${errDetail}`);
+        }
+      } catch (err) {
+        removeTypingIndicator();
+        console.error('Chat error:', err);
+        appendMessage('bot', `⚠️ Server bilan bog'lanishda xatolik yuz berdi: ${err.message}`);
+        showToast("Server bilan bog'lanishda xatolik yuz berdi.");
+      } finally {
+        chatInput.disabled = false;
+        sendBtn.disabled = false;
+        chatInput.focus();
+      }
+    }
+
+    // Submit handler
+    chatForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      sendMessage(chatInput.value);
+    });
+
+    // Chips click handler
+    promptChips.addEventListener('click', (e) => {
+      const chip = e.target.closest('.prompt-chip');
+      if (chip) {
+        const promptText = chip.getAttribute('data-prompt');
+        chatInput.value = promptText;
+        sendMessage(promptText);
+      }
+    });
+  </script>
+</body>
+</html>
